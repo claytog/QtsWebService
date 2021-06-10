@@ -6,25 +6,95 @@ The web service will return:
 2) All flights by airline code
 3) Provide the interface to create new flights
 
-## Getting Started
-
-If necessary, firstly unzip the file named "QantasTechTask.zip".<br/>
-Using XCode, locate and open the file named "QantasTechTask.xcodeproj".<br/>
-The project has no external framework dependancies.
 
 ### Prerequisites
 
-The project is written for iOS, and will run on iPhone and iPad running iOS 14.5 and above.
+Software required to run this project is:
+1) IntelliJ IDEA
+2) Postman
+
+## Getting Started
+
+If downloading the zip from this repository, firstly unzip the file named "QtsWebService-main.zip".<br/>
+Using IntelliJ IDEA, locate and open the directory named "QtsWebService-main".<br/>
 
 ### Installing
 
-To compile the project, please use the latest version of XCode, currently version 14.5.<br/>
-Set the target device to be an iPhone or iPad, or for the best experience, attach and install on physical device.<br/>
-Using the iOS Simulator, press the run button, or from the menu, "Product->Run".
+#### To compile and run the project:
+1) From the left project structure, expand "src->main->kotlin->com.flights.demo"
+2) Select "FlightsApplication.kt"
+3) From the menu select "Run->Run"
+4) Select "FlightsApplication.kt"
 
-### About
+#### To post new flight data:
+1) Open Postman
+2) Import the following cURL statement:
 
-The app will firstly present a loading indicator while retrieving a list of airports from the endpoint.<br/>
-After the list has been loaded, scroll and select the required airport.<br/>
-Once selected, details regarding the airport will appear.<br/>
-To return to the list of airports, press the button labelled "Airports".<br/>
+curl --location --request POST 'http://localhost:8080/flight' \
+--header 'Content-Type: application/json' \
+--data-raw '<br/>{
+    "flightNumber":"QF401",
+    "airlineCode":"QF",
+    "departurePort":"MEL",
+    "arrivalPort":"SYD",
+    "departureTime":"2020-06-12T09:30:23Z",
+    "arrivalTime":"2020-06-12T10:25:23Z"
+}<br/>'
+
+The following data can be replaced and reposted within the previous cURL statement to provide more data.<br/><br/>
+{
+    "flightNumber":"EK555",
+    "airlineCode":"EK",
+    "departurePort":"BKB",
+    "arrivalPort":"SYD",
+    "departureTime":"2020-06-12T09:30:23Z",
+    "arrivalTime":"2020-06-13T14:25:23Z"
+}
+<br/><br/>
+{
+    "flightNumber":"QF400",
+    "airlineCode":"QF",
+    "departurePort":"ADL",
+    "arrivalPort":"SYD",
+    "departureTime":"2020-06-12T09:30:23Z",
+    "arrivalTime":"2020-06-12T11:30:23Z"
+}
+<br/><br/>
+{
+    "flightNumber":"QF401",
+    "airlineCode":"QF",
+    "departurePort":"MEL",
+    "arrivalPort":"SYD",
+    "departureTime":"2020-06-12T09:30:23Z",
+    "arrivalTime":"2020-06-12T10:25:23Z"
+}
+<br/><br/>
+{
+    "flightNumber":"AA111",
+    "airlineCode":"CX",
+    "departurePort":"ZWA",
+    "arrivalPort":"SYD",
+    "departureTime":"2020-06-13T11:30:23Z",
+    "arrivalTime":"2020-06-14T14:45:23Z"
+}
+<br/><br/>
+{
+    "flightNumber":"AA222",
+    "airlineCode":"CX",
+    "departurePort":"ZWS",
+    "arrivalPort":"MEL",
+    "departureTime":"2020-06-15T13:30:23Z",
+    "arrivalTime":"2020-06-16T14:25:23Z"
+}
+
+3) Within the Postmane client, press "Send"
+
+#### To view the imported data:
+1) Import the following cURL statement:
+
+curl --location --request GET 'http://localhost:8080/flight' \
+
+#### To retrieve a list of flights by airline code, import the following cURL statement:
+
+curl --location --request GET 'http://localhost:8080/flight/QF' \
+--header 'Content-Type: application/json' \
