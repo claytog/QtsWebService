@@ -98,3 +98,5 @@ curl --location --request GET 'http://localhost:8080/flight' \
 
 curl --location --request GET 'http://localhost:8080/flight/QF' \
 --header 'Content-Type: application/json' \
+
+To search for a different airline code, change 'QF' to be a different airline code, and press send.
