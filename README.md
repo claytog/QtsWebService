@@ -14,7 +14,7 @@ Software required to run this project is:
 
 ## Getting Started
 
-If downloading the zip from this repository, firstly unzip the file named "QtsWebService-main.zip".<br/>
+If downloading the zip from this repository, firstly download, then unzip the file named "QtsWebService-main.zip".<br/>
 Using IntelliJ IDEA, locate and open the directory named "QtsWebService-main".<br/>
 
 ## Installing
@@ -23,7 +23,9 @@ Using IntelliJ IDEA, locate and open the directory named "QtsWebService-main".<b
 1) From the left project structure, expand "src->main->kotlin->com.flights.demo"
 2) Select "FlightsApplication.kt"
 3) From the menu select "Run->Run"
-4) Select "FlightsApplication.kt"
+4) In the presented dialogue options, select "FlightsApplication.kt"
+
+The SpringBoot application server will start.
 
 ### To post new flight data:
 1) Open Postman
@@ -41,6 +43,7 @@ curl --location --request POST 'http://localhost:8080/flight' \
     "arrivalTime":"2020-06-12T10:25:23Z"
 }'
 ```
+3) Within the Postman client, press Send.<br/><br/>
 The following data can be replaced and reposted within the previous cURL statement to provide more data.<br/><br/>
 ```
 {
@@ -96,21 +99,21 @@ The following data can be replaced and reposted within the previous cURL stateme
     "arrivalTime":"2020-06-16T14:25:23Z"
 }
 ```
-<br/>
-3) Within the Postmane client, press "Send"
+4. Press Send.
 
-### To view the imported data:
+### To view the posted data:
 1) Import the following cURL statement:
 ```
 curl --location --request GET 'http://localhost:8080/flight' \
 ```
-Press Send.
-### To retrieve a list of flights by airline code, import the following cURL statement:
+2) Press Send.
+### To retrieve a list of flights by airline code:
+1) import the following cURL statement:
 ```
 curl --location --request GET 'http://localhost:8080/flight/QF' \
 --header 'Content-Type: application/json' \
 ```
-Press Send.<br/><br/>
+2) Press Send.
 #### To search for a different airline code:
-1. Change 'QF' to be a different airline code, such as CX.
-2. Press Send.
+1) Change 'QF' to be a different airline code, such as CX.
+2) Press Send.
