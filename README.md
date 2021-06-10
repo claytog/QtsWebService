@@ -112,3 +112,7 @@ curl --location --request GET 'http://localhost:8080/flight/QF' \
 #### To search for a different airline code:
 1) Change 'QF' to be a different airline code, such as CX.
 2) Press Send.
+
+## Production Environment
+This solution could be run in a production environment such as AWS.<br/>
+An AWS Elastic Beanstalk instance could be implemented that would provide instances of S3 and EC2 to support the Web Service in Spring Boot.<br/>
