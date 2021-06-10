@@ -13,6 +13,7 @@ class Controller (val repo: FlightRepositories) {
     @GetMapping("/flight")
     fun getAllFlights(): List<Flight> = repo.findAll().toList()
 
+    // return all flights by airline code
     @GetMapping("/flight/{airlineCode}")
     fun getFlightsByAirlineCode(@PathVariable("airlineCode") airlineCode : String): List<Flight> = repo.findFlightsByAirlineCode(airlineCode).toList()
 
