@@ -44,7 +44,7 @@ curl --location --request POST 'http://localhost:8080/flight' \
 }'
 ```
 3) Within the Postman client, press Send.
-#### To provide more data, the following data can be replaced and reposted within the previous cURL statement.<br/>
+#### To provide more data, the following data can be placed into the Body of the previous cURL statement and re-sent.<br/>
 ```
 {
     "flightNumber":"EK555",
