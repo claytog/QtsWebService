@@ -43,8 +43,8 @@ curl --location --request POST 'http://localhost:8080/flight' \
     "arrivalTime":"2020-06-12T10:25:23Z"
 }'
 ```
-3) Within the Postman client, press Send.<br/><br/>
-The following data can be replaced and reposted within the previous cURL statement to provide more data.<br/><br/>
+3) Within the Postman client, press Send.
+#### To provide more data, the following data can be replaced and reposted within the previous cURL statement.<br/>
 ```
 {
     "flightNumber":"EK555",
@@ -55,7 +55,6 @@ The following data can be replaced and reposted within the previous cURL stateme
     "arrivalTime":"2020-06-13T14:25:23Z"
 }
 ```
-<br/><br/>
 ```
 {
     "flightNumber":"QF400",
@@ -66,7 +65,6 @@ The following data can be replaced and reposted within the previous cURL stateme
     "arrivalTime":"2020-06-12T11:30:23Z"
 }
 ```
-<br/><br/>
 ```
 {
     "flightNumber":"QF401",
@@ -77,7 +75,6 @@ The following data can be replaced and reposted within the previous cURL stateme
     "arrivalTime":"2020-06-12T10:25:23Z"
 }
 ```
-<br/><br/>
 ```
 {
     "flightNumber":"AA111",
@@ -88,7 +85,6 @@ The following data can be replaced and reposted within the previous cURL stateme
     "arrivalTime":"2020-06-14T14:45:23Z"
 }
 ```
-<br/><br/>
 ```
 {
     "flightNumber":"AA222",
@@ -99,7 +95,6 @@ The following data can be replaced and reposted within the previous cURL stateme
     "arrivalTime":"2020-06-16T14:25:23Z"
 }
 ```
-4. Press Send.
 
 ### To view the posted data:
 1) Import the following cURL statement:
