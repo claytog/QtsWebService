@@ -9,7 +9,7 @@ The web service will return:
 ## Prerequisites
 
 Software required to run this project is:
-1) IntelliJ IDEA (https://www.jetbrains.com/idea/download/)
+1) IntelliJ IDEA (https://www.jetbrains.com/idea/download)
 2) Postman (https://www.postman.com/downloads)
 
 ## Getting Started
